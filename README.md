@@ -1,123 +1,125 @@
-# AI Service App
+# AI Chat Assistant
 
-A modern React Native application that provides an intuitive interface for interacting with various AI models through speech and text. The app supports multiple AI providers and features real-time speech recognition, text-to-speech capabilities, and thread-based conversation management.
+A React Native mobile application that enables natural conversations with AI through text and voice input. Built with OpenAI's GPT models, the app provides a seamless chat experience with thread management and voice recognition capabilities.
 
 ## Features
 
-- 🎙️ **Speech Recognition**: Real-time voice input with support for multiple languages
-- 💬 **Text Chat**: Traditional text-based interaction with AI models
-- 🤖 **Multiple AI Models**: Support for various AI providers including OpenAI and Perplexity
-- 🔄 **Thread Management**: Organize conversations in separate threads
-- 🗣️ **Text-to-Speech**: AI responses can be read aloud
-- 📱 **Modern UI**: Beautiful and responsive interface with dark mode support
-- 🔒 **Secure**: API keys are stored securely
-- 🌍 **Multi-language Support**: Configurable speech recognition language
+- 💬 **Smart Chat**: Intelligent conversations powered by OpenAI's GPT models
+- 🎙️ **Voice Input**: Seamless voice-to-text for natural interaction
+- 📝 **Text Chat**: Traditional text-based messaging interface
+- 🧵 **Thread Management**: Organize and manage multiple conversations
+- 🤖 **Model Selection**: Choose between GPT-3.5 and GPT-4 models
+- 📱 **Modern UI**: Clean and responsive interface using GiftedChat
 
-## Prerequisites
+## Getting Started
+
+### Prerequisites
 
 - Node.js (v16 or later)
 - npm or yarn
 - React Native development environment
-- iOS Simulator/Device (for iOS development)
-- Android Studio/Device (for Android development)
+- OpenAI API key
 
-## Installation
+### Installation
 
-1. Clone the repository:
+1. Clone and install dependencies:
 ```bash
-git clone https://github.com/yourusername/ai-service-app.git
-cd ai-service-app
-```
-
-2. Install dependencies:
-```bash
+git clone https://github.com/yourusername/ai-chat-assistant.git
+cd ai-chat-assistant
 npm install
-# or
-yarn install
 ```
 
-3. Install iOS dependencies (iOS only):
+2. Set up environment variables:
 ```bash
-cd ios
-pod install
-cd ..
+# Create .env file
+echo "OPENAI_API_KEY=your_api_key_here" > .env
 ```
 
-4. Create a `.env` file in the root directory and add your API keys:
-```
-OPENAI_API_KEY=your_openai_api_key
-PERPLEXITY_API_KEY=your_perplexity_api_key
-```
-
-## Running the App
-
-### iOS
+3. Start the development server:
 ```bash
+npm start
+```
+
+4. Run on your preferred platform:
+```bash
+# iOS
 npm run ios
-# or
-yarn ios
-```
 
-### Android
-```bash
+# Android
 npm run android
-# or
-yarn android
 ```
 
-## Configuration
+## Usage Guide
 
-### AI Models
-The app supports multiple AI models. You can configure them in `src/services/storage.ts`:
+### Chat Interface
 
-- OpenAI models (e.g., GPT-3.5-turbo, GPT-4)
-- Perplexity models
-- Add other providers as needed
+- Start a new chat using the "+" button
+- Type messages in the text input
+- Use the microphone button for voice input
+- View message history in threaded conversations
 
-### Speech Recognition
-Speech recognition settings can be configured in the app settings:
+### Model Selection
 
-- Recognition language
-- Voice options
-- Speech rate and pitch
+- Choose your preferred GPT model
+- Available models:
+  - GPT-3.5 Turbo (default)
+  - GPT-4
+  - GPT-4 Turbo
 
-## Usage
+### Thread Management
 
-1. **Starting a Conversation**
-   - Tap "New Chat" to start a new conversation
-   - Use the microphone button for voice input
-   - Type in the text input for written messages
+- View all conversations in the Threads tab
+- Switch between active conversations
+- Delete unwanted threads
+- Threads are automatically titled based on context
 
-2. **Managing Threads**
-   - View all conversations in the "All Threads" section
-   - Threads are automatically titled based on the first message
-   - Switch between threads easily
+## Project Structure
 
-3. **Changing AI Models**
-   - Tap "Change" next to the current model name
-   - Select from available models in the model picker
-   - Models require appropriate API keys
+```
+src/
+├── components/          # React components
+│   ├── chat/           # Chat interface components
+│   ├── voice/          # Voice input components
+│   └── common/         # Shared components
+├── hooks/              # Custom React hooks
+├── services/           # Core services
+│   ├── ai.ts          # OpenAI integration
+│   └── storage.ts     # Local storage management
+└── types/             # TypeScript definitions
+```
 
-4. **Voice Settings**
-   - Configure speech recognition language
-   - Adjust text-to-speech settings
-   - Enable/disable voice feedback
+## Key Technologies
+
+- React Native & Expo
+- OpenAI GPT API
+- React Native GiftedChat
+- Expo Speech Recognition
+- AsyncStorage for persistence
+
+## Development
+
+### Running Tests
+```bash
+npm test
+```
+
+### Building for Production
+```bash
+# iOS
+npm run build:ios
+
+# Android
+npm run build:android
+```
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built with React Native and Expo
-- Uses various AI providers' APIs
-- Implements Expo Speech Recognition
-- Uses React Native Gifted Chat for the chat interface
