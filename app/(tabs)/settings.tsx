@@ -361,45 +361,6 @@ export default function SettingsScreen() {
           <Text style={styles.navigationArrow}>›</Text>
         </TouchableOpacity>
       </View>
-
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>AI Settings</Text>
-        <View style={styles.setting}>
-          <Text style={styles.settingLabel}>Auto-generate AI response</Text>
-          <Switch
-            value={settings.autoGenerateResponse}
-            onValueChange={() => toggleSetting('autoGenerateResponse')}
-            trackColor={{ false: '#767577', true: '#81b0ff' }}
-            thumbColor={settings.autoGenerateResponse ? '#007AFF' : '#f4f3f4'}
-          />
-        </View>
-      </View>
-
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Voice Settings</Text>
-        <View style={styles.setting}>
-          <Text style={styles.settingLabel}>Use high-quality voice</Text>
-          <Switch
-            value={settings.useHighQualityVoice}
-            onValueChange={() => toggleSetting('useHighQualityVoice')}
-            trackColor={{ false: '#767577', true: '#81b0ff' }}
-            thumbColor={settings.useHighQualityVoice ? '#007AFF' : '#f4f3f4'}
-          />
-        </View>
-      </View>
-
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Data Settings</Text>
-        <View style={styles.setting}>
-          <Text style={styles.settingLabel}>Save transcriptions</Text>
-          <Switch
-            value={settings.saveTranscriptions}
-            onValueChange={() => toggleSetting('saveTranscriptions')}
-            trackColor={{ false: '#767577', true: '#81b0ff' }}
-            thumbColor={settings.saveTranscriptions ? '#007AFF' : '#f4f3f4'}
-          />
-        </View>
-      </View>
     </ScrollView>
   );
 }
