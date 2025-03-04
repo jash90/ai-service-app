@@ -23,7 +23,7 @@ import {
   MODEL_PROVIDERS,
   savePerplexityApiKey,
   getPerplexityApiKey
-} from '../../src/services/storage';
+} from '../../services/storage';
 
 export default function SettingsScreen() {
   const [settings, setSettings] = useState<AppSettings>(DEFAULT_SETTINGS);

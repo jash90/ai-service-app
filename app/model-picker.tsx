@@ -10,7 +10,7 @@ import {
   getPerplexityApiKey,
   MODEL_TO_PROVIDER,
   MODEL_PROVIDERS
-} from '../src/services/storage';
+} from '../services/storage';
 
 export default function ModelPickerScreen() {
   const [selectedModel, setSelectedModel] = useState<AIModel>(AI_MODELS.GPT_3_5_TURBO);

@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { IMessage } from 'react-native-gifted-chat';
+import { GiftedChat, IMessage } from 'react-native-gifted-chat';
 import { useAI } from '../services/ai';
 import {
     saveChatThread,

@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert, ActivityIndicator } from 'react-native';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { Plus, Trash2, MessageSquare } from 'lucide-react-native';
-import { getChatThreads, deleteChatThread, saveCurrentThreadId, ChatThread } from '../../src/services/storage';
+import { getChatThreads, deleteChatThread, saveCurrentThreadId, ChatThread } from '../../services/storage';
 
 export default function ThreadsScreen() {
   const [threads, setThreads] = useState<ChatThread[]>([]);

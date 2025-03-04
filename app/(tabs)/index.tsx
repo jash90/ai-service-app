@@ -3,16 +3,16 @@ import { Platform, StyleSheet, KeyboardAvoidingView, Alert } from 'react-native'
 import { GiftedChat } from 'react-native-gifted-chat';
 import { useSpeechRecognitionEvent } from 'expo-speech-recognition';
 import { useRouter, useFocusEffect } from 'expo-router';
-import { getAIModel } from '../../src/services/storage';
+import { getAIModel } from '../../services/storage';
 
-import { ChatInput } from '../../src/components/chat/ChatInput';
-import { VoiceRecorder } from '../../src/components/voice/VoiceRecorder';
-import { ModelInfo } from '../../src/components/model/ModelInfo';
-import { ThreadInfo } from '../../src/components/thread/ThreadInfo';
-import { ErrorBanner } from '../../src/components/common/ErrorBanner';
+import { ChatInput } from '../../components/chat/ChatInput';
+import { VoiceRecorder } from '../../components/voice/VoiceRecorder';
+import { ModelInfo } from '../../components/model/ModelInfo';
+import { ThreadInfo } from '../../components/thread/ThreadInfo';
+import { ErrorBanner } from '../../components/common/ErrorBanner';
 
-import { useChat } from '../../src/hooks/useChat';
-import { useVoice } from '../../src/hooks/useVoice';
+import { useChat } from '../../hooks/useChat';
+import { useVoice } from '../../hooks/useVoice';
 
 export default function ChatScreen() {
   const [textInput, setTextInput] = React.useState('');

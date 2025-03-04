@@ -6,7 +6,7 @@ import {
   getLanguage,
   LANGUAGES,
   Language,
-} from '../src/services/storage';
+} from '../services/storage';
 
 export default function LanguagePickerScreen() {
   const [selectedLanguage, setSelectedLanguage] = useState<Language>(LANGUAGES.ENGLISH_US);
